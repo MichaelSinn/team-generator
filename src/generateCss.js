@@ -1,6 +1,7 @@
 const fs = require("fs");
 
-const css = `:root{
+function generateCss() {
+    const css = `:root{
     --manager: #5e75e5;
     --engineer: #3fa8b4;
     --intern: #84e2ec;
@@ -87,6 +88,11 @@ ul{
 }
 `;
 
-fs.writeFile("./dist/main.css", css, (err)=>{
-    err ? console.error(err) : console.log("Successfully wrote CSS file.");
-});
+    fs.writeFile("./dist/main.css", css, (err) => {
+        err ? console.error(err) : console.log("Successfully wrote CSS file.");
+    });
+}
+
+module.exports = {
+    generateCss: generateCss
+};
