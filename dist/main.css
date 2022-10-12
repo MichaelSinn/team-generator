@@ -8,6 +8,7 @@
 
 html{
     font-family: "Segoe UI", sans-serif;
+    background-color: #ffe3e3;
 }
 
 body{
@@ -19,6 +20,11 @@ header{
     background-color: var(--tertiary-colour);
     margin-bottom: 30px;
     color: white;
+}
+
+article{
+    margin: 7px;
+    border-radius: 10px;
 }
 
 ul{
@@ -53,11 +59,13 @@ ul{
     background-color: var(--manager);
     text-align: center;
     padding: 10px 0;
+    border-radius: 10px 10px 0 0;
 }
 
 .card-content{
     background-color: var(--secondary-colour);
     padding: 15px;
+    border-radius: 0 0 10px 10px;
 }
 
 .engineer{
