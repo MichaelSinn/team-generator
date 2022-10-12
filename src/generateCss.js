@@ -1,0 +1,92 @@
+const fs = require("fs");
+
+const css = `:root{
+    --manager: #5e75e5;
+    --engineer: #3fa8b4;
+    --intern: #84e2ec;
+    --secondary-colour: #ffffff;
+    --tertiary-colour: #477998;
+}
+
+html{
+    font-family: "Segoe UI", sans-serif;
+    background-color: #ffe3e3;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-color: var(--tertiary-colour);
+    margin-bottom: 30px;
+    color: white;
+}
+
+article{
+    margin: 7px;
+    border-radius: 10px;
+}
+
+ul{
+    list-style: none;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card{
+    width: 300px;
+    box-shadow: 5px 4px 19px -2px rgba(0,0,0,0.3);
+    color: #3b3c42;
+}
+
+.card > *, .card-header > *, .card-content > *{
+    margin: 0;
+    padding: 0;
+}
+
+.card-header{
+    background-color: var(--manager);
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-content{
+    background-color: var(--secondary-colour);
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+}
+
+.engineer{
+    background-color: var(--engineer);
+}
+
+.manager{
+    background-color: var(--manager);
+}
+
+.intern{
+    background-color: var(--intern);
+}
+
+.hidden{
+    display: none;
+}
+`;
+
+fs.writeFile("./dist/main.css", css, (err)=>{
+    err ? console.error(err) : console.log("Successfully wrote CSS file.");
+});
