@@ -2,6 +2,8 @@ const inquirer = require("inquirer");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
 const Manager = require("./lib/manager");
+const { generateHtml } = require("./src/generateHtml");
+const { generateCss } = require("./src/generateCss");
 
 const menuPrompts = [
     {
@@ -101,6 +103,8 @@ function menu() {
             });
         }else if (responses["menuOptions"] === "Finish Building Team") {
             console.log(team);
+            generateHtml(team);
+            generateCss();
             console.log("Goodbye!");
         }
     }).catch(e => {
