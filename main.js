@@ -88,6 +88,7 @@ const internPrompts = [
     },
 ];
 
+// Empty team object
 const team = {
     manager: null,
     engineers: [],
