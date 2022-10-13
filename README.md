@@ -13,6 +13,8 @@ Clone or fork this repository, install the required packages with npm install, a
 
 In order to use this project, follow the installation instructions and then proceed to answer all of the given prompts. The HTML and CSS file will be automatically generated with all of your team's information.
 
+Live demo link: https://drive.google.com/file/d/11UxgvPpocrMM4Lxru5jJ7KWlH0z-tOZr/view
+
 ## License
 
 This project is covered under the license of MIT. More information about this license: https://opensource.org/licenses/MIT
