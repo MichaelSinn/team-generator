@@ -12,7 +12,7 @@ function generateHtml(team) {
             <section class="card-content">
                 <ul>
                     <li>ID: ${manager.id}</li>
-                    <li>Email: ${manager.email}</li>
+                    <li>Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
                     <li>Office number: ${manager.officeNumber}</li>
                 </ul>
             </section>
@@ -29,7 +29,7 @@ function generateHtml(team) {
             <section class="card-content">
                 <ul>
                     <li>ID: ${intern.id}</li>
-                    <li>Email: ${intern.email}</li>
+                    <li>Email: <a href="mailto:${intern.email}">${intern.email}</a></li>
                     <li>School ${intern.school}</li>
                 </ul>
             </section>
@@ -48,8 +48,8 @@ function generateHtml(team) {
             <section class="card-content">
                 <ul>
                     <li>ID: ${engineer.id}</li>
-                    <li>Email: ${engineer.email}</li>
-                    <li>GitHub: ${engineer.github}</li>
+                    <li>Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
+                    <li>GitHub: <a href="https://github.com/"${engineer.github} target="_blank">${engineer.github}</a></li>
                 </ul>
             </section>
         </article>`;
