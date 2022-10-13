@@ -49,7 +49,7 @@ function generateHtml(team) {
                 <ul>
                     <li>ID: ${engineer.id}</li>
                     <li>Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
-                    <li>GitHub: <a href="https://github.com/"${engineer.github} target="_blank">${engineer.github}</a></li>
+                    <li>GitHub: <a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></li>
                 </ul>
             </section>
         </article>`;
