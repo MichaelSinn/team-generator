@@ -95,7 +95,6 @@ const team = {
 
 function menu() {
     inquirer.prompt(menuPrompts).then(responses => { // Ask the prompts for the menu
-        console.log(responses);
         if (responses["menuOptions"] === "Engineer") {
             inquirer.prompt(engineerPrompts).then(responses => {
                 const {name, id, email, github} = responses;
@@ -109,10 +108,8 @@ function menu() {
                 menu();
             });
         } else if (responses["menuOptions"] === "Finish Building Team") {
-            console.log(team);
             generateHtml(team);
             generateCss();
-            console.log("Goodbye!");
         }
     }).catch(e => {
         // Catch any errors
