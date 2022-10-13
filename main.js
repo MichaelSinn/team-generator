@@ -2,9 +2,10 @@ const inquirer = require("inquirer");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
 const Manager = require("./lib/manager");
-const { generateHtml } = require("./src/generateHtml");
-const { generateCss } = require("./src/generateCss");
+const {generateHtml} = require("./src/generateHtml");
+const {generateCss} = require("./src/generateCss");
 
+// Prompts for the different types of employee
 const menuPrompts = [
     {
         type: "list",
@@ -13,6 +14,8 @@ const menuPrompts = [
         choices: ["Engineer", "Intern", "Finish Building Team"]
     }
 ];
+
+// Manager Prompts
 const managerPrompts = [
     {
         type: "input",
@@ -35,6 +38,8 @@ const managerPrompts = [
         message: "Please input the Manager's office number"
     },
 ];
+
+// Engineer prompts
 const engineerPrompts = [
     {
         type: "input",
@@ -57,6 +62,8 @@ const engineerPrompts = [
         message: "Please input the Engineer's GitHub"
     },
 ];
+
+// Intern prompts
 const internPrompts = [
     {
         type: "input",
@@ -95,13 +102,13 @@ function menu() {
                 team.engineers.push(new Engineer(name, id, email, github));
                 menu();
             });
-        }else if (responses["menuOptions"] === "Intern") {
+        } else if (responses["menuOptions"] === "Intern") {
             inquirer.prompt(internPrompts).then(responses => {
                 const {name, id, email, school} = responses;
                 team.interns.push(new Intern(name, id, email, school));
                 menu();
             });
-        }else if (responses["menuOptions"] === "Finish Building Team") {
+        } else if (responses["menuOptions"] === "Finish Building Team") {
             console.log(team);
             generateHtml(team);
             generateCss();
@@ -113,7 +120,7 @@ function menu() {
     });
 }
 
-function init(){
+function init() {
     inquirer.prompt(managerPrompts).then(responses => {
         const {name, id, email, officeNumber} = responses;
         team.manager = new Manager(name, id, email, officeNumber);

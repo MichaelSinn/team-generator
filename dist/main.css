@@ -1,4 +1,4 @@
-:root{
+:root {
     --manager: #5e75e5;
     --engineer: #3fa8b4;
     --intern: #84e2ec;
@@ -6,80 +6,80 @@
     --tertiary-colour: #477998;
 }
 
-html{
+html {
     font-family: "Segoe UI", sans-serif;
     background-color: #ffe3e3;
 }
 
-body{
+body {
     padding: 0;
     margin: 0;
 }
 
-header{
+header {
     background-color: var(--tertiary-colour);
     margin-bottom: 30px;
     color: white;
 }
 
-article{
+article {
     margin: 7px;
     border-radius: 10px;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-.column{
+.column {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.row{
+.row {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
 }
 
-.card{
+.card {
     width: 300px;
-    box-shadow: 5px 4px 19px -2px rgba(0,0,0,0.3);
+    box-shadow: 5px 4px 19px -2px rgba(0, 0, 0, 0.3);
     color: #3b3c42;
 }
 
-.card > *, .card-header > *, .card-content > *{
+.card > *, .card-header > *, .card-content > * {
     margin: 0;
     padding: 0;
 }
 
-.card-header{
+.card-header {
     background-color: var(--manager);
     text-align: center;
     padding: 10px 0;
     border-radius: 10px 10px 0 0;
 }
 
-.card-content{
+.card-content {
     background-color: var(--secondary-colour);
     padding: 15px;
     border-radius: 0 0 10px 10px;
 }
 
-.engineer{
+.engineer {
     background-color: var(--engineer);
 }
 
-.manager{
+.manager {
     background-color: var(--manager);
 }
 
-.intern{
+.intern {
     background-color: var(--intern);
 }
 
-.hidden{
+.hidden {
     display: none;
 }

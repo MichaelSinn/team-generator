@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-function generateHtml(team){
+function generateHtml(team) {
     const {manager, engineers, interns} = team;
 
     let managerCard = `<article class="card">
@@ -19,7 +19,7 @@ function generateHtml(team){
         </article>`;
 
     let internCards = [];
-    interns.forEach(intern =>{
+    interns.forEach(intern => {
         let internCard = `<article class="card">
             <section class="card-header intern">
                 <h2>${intern.name}</h2>
@@ -38,7 +38,7 @@ function generateHtml(team){
     });
 
     let engineerCards = [];
-    engineers.forEach(engineer =>{
+    engineers.forEach(engineer => {
         let engineerCard = `<article class="card">
             <section class="card-header engineer">
                 <h2>${engineer.name}</h2>
@@ -70,17 +70,17 @@ function generateHtml(team){
         '    <main class="row">';
 
     html += managerCard;
-    engineerCards.forEach(card =>{
+    engineerCards.forEach(card => {
         html += card;
     });
-    internCards.forEach(card =>{
+    internCards.forEach(card => {
         html += card;
     });
     html += '    </main>\n' +
         '</body>\n' +
         '</html>';
 
-    fs.writeFile("./dist/index.html", html, (err)=>{
+    fs.writeFile("./dist/index.html", html, (err) => {
         err ? console.error(err) : console.log("Successfully wrote HTML file.");
     });
 }
